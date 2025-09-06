@@ -4,7 +4,7 @@
 
 <p align="center" style="color:#00ffff; font-family:'Courier New', monospace;">
 Студент Бизнес-информатики, РЭУ | Москва<br>
-<a href="mailto:daniilphillips@gmail.com" style="color:#ff00ff;">EMAIL</a> | 
+daniilphillips@gmail.com | 
 <a href="https://github.com/DaniilPhillips" target="_blank" style="color:#ff00ff;">GITHUB</a>
 </p>
 
@@ -23,7 +23,7 @@
 <ul style="color:#00ffea; font-family:'Courier New', monospace;">
   <li>💻 Программирование: C++, C#, Python, Java, JS, HTML, Solidity, SQL</li>
   <li>📊 Аналитика: Loginom, Yandex DataLens, Microsoft Office</li>
-  <li>📐 Математика и ML: анализ, дискретка, линал, статистика, ML</li>
+  <li>📐 Математика: анализ, дискретка, линал, статистика, ML</li>
   <li>⚙️ Другое: BPMN, IDEF, EPC, бизнес-процессы, корпоративные ИС</li>
 </ul>
 
