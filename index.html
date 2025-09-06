@@ -10,8 +10,8 @@
     body {
       margin: 0;
       padding: 0;
-      background: #000000; /* Чисто черный фон */
-      color: #00ffea; /* ярко-голубой текст */
+      background: #000000;
+      color: #00ffea;
       font-family: "Press Start 2P", monospace;
       font-size: 12px;
       line-height: 1.6;
@@ -21,19 +21,19 @@
       background: #000000;
       text-align: center;
       padding: 40px 10px;
-      border-bottom: 4px solid #ff00ff; /* ядовито-розовая линия */
+      border-bottom: 4px solid #ff00ff;
     }
 
     header h1 {
       margin: 0;
       font-size: 20px;
-      color: #39ff14; /* неоново-зеленый */
-      text-shadow: 2px 2px #ff00ff; /* пиксельная подсветка */
+      color: #39ff14;
+      text-shadow: 2px 2px #ff00ff;
     }
 
     header p {
       margin: 5px 0;
-      color: #00ffff; /* ярко-голубой */
+      color: #00ffff;
     }
 
     section {
@@ -46,7 +46,7 @@
     }
 
     h2 {
-      color: #ffff00; /* кислотно-желтый */
+      color: #ffff00;
       font-size: 14px;
       border-bottom: 2px dashed #ff00ff;
       padding-bottom: 5px;
@@ -63,7 +63,7 @@
       margin: 6px 0;
       padding: 8px 10px;
       border: 2px solid #39ff14;
-      background: #111; /* чуть отличающийся черный для блоков */
+      background: #111;
       color: #00ffea;
       text-shadow: 1px 1px #ff00ff;
     }
@@ -84,6 +84,70 @@
       color: #39ff14;
       font-size: 10px;
     }
+
+    /* Стили для аватарки с эффектом глубины */
+    .avatar-container {
+      text-align: center;
+      margin: 0 auto 20px auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .avatar {
+      width: 180px;
+      height: 180px;
+      border: 4px solid #39ff14;
+      background: #000000;
+      image-rendering: pixelated;
+      transition: all 0.3s ease;
+      object-fit: cover;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Фиолетовый контур для эффекта глубины */
+    .avatar::after {
+      content: '';
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      right: -4px;
+      bottom: -4px;
+      border: 2px solid #ff00ff;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    /* Неоновое свечение */
+    .avatar::before {
+      content: '';
+      position: absolute;
+      top: -6px;
+      left: -6px;
+      right: -6px;
+      bottom: -6px;
+      background: transparent;
+      box-shadow: 0 0 15px #39ff14;
+      z-index: 1;
+      pointer-events: none;
+      opacity: 0.7;
+    }
+
+    .avatar:hover {
+      transform: translate(-2px, -2px);
+    }
+
+    .avatar:hover::after {
+      right: -6px;
+      bottom: -6px;
+    }
+
+    .avatar:hover::before {
+      box-shadow: 0 0 25px #00ffff;
+      opacity: 1;
+    }
   </style>
 </head>
 <body>
@@ -94,7 +158,11 @@
   </header>
 
   <section>
-    <img src="https://download.dashmap.live/f532aae0-7dd0-4004-8ab8-43c7145c5473/image_2025-09-06_16-41-13.png" alt="Аватар Даниила Филлипса" class="avatar" class="center" width="300" height="400">
+    <div class="avatar-container">
+      <img src="https://download.dashmap.live/f532aae0-7dd0-4004-8ab8-43c7145c5473/image_2025-09-06_16-41-13.png" 
+           alt="Аватар Даниила Филлипса" 
+           class="avatar">
+    </div>
     <h2>ОБО МНЕ</h2>
     <p>Изучаю прикладную математику, информатику, базы данных, корпоративные ИС и машинное обучение. 
     Опыт: C++, C#, Python, Java, JavaScript, SQL. 
