@@ -85,68 +85,37 @@
       font-size: 10px;
     }
 
-    /* Стили для аватарки с эффектом глубины */
+    /* Стили для аватарки */
     .avatar-container {
       text-align: center;
       margin: 0 auto 20px auto;
       display: flex;
       justify-content: center;
       align-items: center;
-      position: relative;
     }
 
     .avatar {
       width: 180px;
       height: 180px;
       border: 4px solid #39ff14;
+      box-shadow: 
+        0 0 0 3px #ff00ff,
+        0 0 15px #39ff14,
+        inset 0 0 10px rgba(255, 0, 255, 0.3);
+      padding: 6px;
       background: #000000;
       image-rendering: pixelated;
       transition: all 0.3s ease;
       object-fit: cover;
-      position: relative;
-      z-index: 2;
-    }
-
-    /* Фиолетовый контур для эффекта глубины */
-    .avatar::after {
-      content: '';
-      position: absolute;
-      top: 4px;
-      left: 4px;
-      right: -4px;
-      bottom: -4px;
-      border: 2px solid #ff00ff;
-      z-index: 1;
-      pointer-events: none;
-    }
-
-    /* Неоновое свечение */
-    .avatar::before {
-      content: '';
-      position: absolute;
-      top: -6px;
-      left: -6px;
-      right: -6px;
-      bottom: -6px;
-      background: transparent;
-      box-shadow: 0 0 15px #39ff14;
-      z-index: 1;
-      pointer-events: none;
-      opacity: 0.7;
+      border-radius: 4px;
     }
 
     .avatar:hover {
-      transform: translate(-2px, -2px);
-    }
-
-    .avatar:hover::after {
-      right: -6px;
-      bottom: -6px;
-    }
-
-    .avatar:hover::before {
-      box-shadow: 0 0 25px #00ffff;
-      opacity: 1;
+      transform: scale(1.05);
+      box-shadow: 
+        0 0 0 4px #ff00ff,
+        0 0 25px #00ffff,
+        inset 0 0 15px rgba(255, 0, 255, 0.5);
     }
   </style>
 </head>
